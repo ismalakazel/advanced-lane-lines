@@ -6,7 +6,7 @@
 
 ### Camera calibration
 
-The code for calibrating the camera can be found in `scripts/calibration.py`. 
+The code for calibrating the camera can be found in `scripts/calibration.py` and the second cell of the jupyter notebook. 
 
 In summary, I first downloaded and stored checkboard images in `scripts/assets/camera_images/` with each image name followed by a number (such as `calibration01.jpg`) starting from 01 to the total number of images. Then I used the glob module to read all images, loop through them and calculate the image points from each image  with `cv2.findChessboardCorners`. I then store the images points in an array with a matchin object points array. Finally, I calibrated the camera with a test image and stored the camera matrix (mtx) and distortion coefficients (dist) in a pickle file located at `./calibration.p`.
 
@@ -36,7 +36,7 @@ The result was satisfatory, though it could be improved. After experimenting com
 
 ![binary combined](https://github.com/ismalakazel/advanced-lane-lines/blob/master/assets/final_images/binary.png)
 
-The relevant code for creating the binary images can be found in `sobel.py`. Here's an example on how I converted and created a sobel binary image:
+The relevant code for creating the binary images can be found in `gradient_threshold.py` and cell 5 of the jupyter notebook. Here's an example on how I converted and created a sobel binary image:
 
 ```python
 v = cv2.cvtColor(img, cv2.COLOR_RGB2HLS)[:, :, 2]                            
