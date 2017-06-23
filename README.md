@@ -92,6 +92,8 @@ Putting all the pieces described above together resulted in the following image:
 
 ![result](https://github.com/ismalakazel/advanced-lane-lines/blob/master/assets/final_images/result.png)
 
+the output video can be see [here](https://www.youtube.com/watch?v=KP1b66bGyB0)
+
 ### Issues:
 
 After testing the pipeline on the challenge videos it was noted that different lighting condition pose a problem to identifying lanes properly. Also, the current pipeline may mistakenly identify shadows or other continious lines on the road as lanes. More testing needs to be done in the color spacing field.
